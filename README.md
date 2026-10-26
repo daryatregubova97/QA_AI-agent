@@ -11,19 +11,19 @@ requirement-review
         ↓
 Requirement Quality Gate
         ↓
-task-design
-        ↓
-Task Design Quality Gate
-        ↓
-test-design
-        ↓
-Test Design Quality Gate
-        ↓
-Final Result
+    ┌───────────────┐
+    ↓               ↓
+task-design     test-design
+    ↓               ↓
+Task Design     Test Design
+Quality Gate    Quality Gate
+    └───────┬───────┘
+            ↓
+       Final Report
 ```
+После прохождения Requirement Quality Gate Skills `task-design` и `test-design` могут выполняться параллельно.
 
-Если на одном из этапов обнаруживается критическая проблема, агент не продолжает зависимый workflow и передаёт проблему на уточнение.
-
+Если на одном из этапов обнаруживается критическая проблема, агент не считает соответствующий результат валидным и фиксирует причину блокировки.
 ## Project Structure
 
 ```text
